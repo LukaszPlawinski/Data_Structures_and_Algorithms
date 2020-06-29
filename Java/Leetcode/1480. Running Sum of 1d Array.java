@@ -15,10 +15,14 @@ Output: [1,2,3,4,5]
 Explanation: Running sum is obtained as follows: [1, 1+1, 1+1+1, 1+1+1+1, 1+1+1+1+1].
 */
 
-int ans[] = new int[nums.length];
-int c=0;
-for(int n = 0;n<nums.length;n++){
-    c+=nums[n];
-    ans[n]=c;
+class Solution {
+    public int[] runningSum(int[] nums) {
+        int ans[] = new int[nums.length];
+        int c=0;
+        for(int n = 0;n<nums.length;n++){
+            c+=nums[n];
+            ans[n]=c;
+        }
+        return ans;
+    }
 }
-return ans;
